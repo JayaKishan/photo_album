@@ -1,0 +1,122 @@
+body {
+  font-family: monospace;
+  margin: 20px;
+}
+img
+{
+    height: 300px;
+    margin: 2px;
+}
+.draggable
+{
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+.dropped
+{
+    position: static !important;
+}
+#dvSource
+{
+    border: 1px solid #ccc;
+    /* padding: 5px; */
+    min-height: 100px;
+    width: 430px;
+}
+
+#dvDest
+{
+    border: 1px solid #ccc;
+    /* padding: 5px; */
+    min-height: 100px;
+    width: 100%;
+}
+
+.selectedImages {
+  margin-bottom: 15px;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.divbutton {
+    height: 100px;
+    background: #0000ff;
+    float: center;
+}
+button.addBtn, button.delBtn  {
+  border-radius: 30%;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  font-size: 25px;
+}
+
+div.column:hover + button, button:hover {
+    display: inline-block;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.totalCount {
+  float: right;
+  margin-right: 40px;
+  margin-top: 18px;
+}
+input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  float: right;
+  margin-right: 5%;
+}

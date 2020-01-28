@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <h1>Photo Album</h1>
+    <div class="selectedImages">Drop here
+      <div id="dvDest" class="row">
+      </div>
+    </div>
+    <div class="imagesTabs">
+      <div class="tab">
+        <button class="tablinks" onclick="openCars(event, 'BMW')">BMW</button>
+        <button class="tablinks" onclick="openCars(event, 'Audi')">Audi</button>
+        <button class="tablinks" onclick="openCars(event, 'Benz')">Benz</button>
+        <input type="text" id="filter" name="search" placeholder="Search here..">
+        <div class="totalCount">
+          <span class="carCount"></span><span> Media</span>
+        </div>
+      </div>
+
+      <div id="BMW" class="tabcontent">
+        <h3>BMW Serires</h3>
+        <div class="row" id="selectImg">
+          <div class="column" id="dvSource" data-carId="bmw">
+            <img src="./images/bmw/bmw3.jpg" alt="BMW" style="width:100%">
+            BMW3
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="bmw">
+            <img src="./images/bmw/bmw7.jpeg" alt="BMW" style="width:100%">
+            BMW7
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="bmw">
+            <img src="./images/bmw/bmwz4.jpg" alt="BMW" style="width:100%">
+            BMWZ4
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Audi" class="tabcontent">
+        <h3>Audi</h3>
+        <div class="row" id="selectImg">
+          <div class="column" id="dvSource" data-carId="r8">
+            <img src="./images/audi/r8.jpeg" alt="Audi" style="width:100%">
+            R8
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="a5">
+            <img src="./images/audi/a5.jpeg" alt="Audi" style="width:100%">
+            A5
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="q7">
+            <img src="./images/audi/q7.jpg" alt="Audi" style="width:100%">
+            Q7
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Benz" class="tabcontent" id="dvSource">
+        <h3>Benz</h3>
+        <div class="row" id="selectImg">
+          <div class="column"  id="dvSource" data-carId="cclass">
+            <img src="./images/benz/cclass.jpeg" alt="Benz" style="width:100%">
+            C Class
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="eclass">
+            <img src="./images/benz/eclass.jpeg" alt="Benz" style="width:100%">
+            E Class
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+          <div class="column" id="dvSource" data-carId="gla">
+            <img src="./images/benz/gla.jpeg" alt="Benz" style="width:100%">
+            GLA
+            <button type="button" style="display: none;" class="addBtn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.24/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="./scripts/filter.js"></script>
+    <script src="./scripts/tabs.js"></script>
+    <script src="./scripts/dragndrop.js"></script>
+    <script src="./scripts/addndel.js"></script>
+</html>
